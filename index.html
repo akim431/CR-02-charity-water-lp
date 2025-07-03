@@ -1,47 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity: Water Landing Page</title>
+
+  <!-- Proxima Nova via Typekit (replace xxxxxx with your Typekit ID if using) -->
+  <link rel="stylesheet" href="https://use.typekit.net/xxxxxx.css">
+
+  <style>
+    /* ====== Global Styles ====== */
+    body {
+      margin: 0;
+      font-family: 'Proxima Nova', sans-serif;
+      background-color: #F3F0E7; /* eggshell pale off-white */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: #FFD500; /* vibrant yellow */
+      color: #333;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #e6c800; /* slightly darker yellow on hover */
+    }
+
+    /* ====== Header with Logo and Brand Name ====== */
+    header {
+      background-color: #F3F0E7; /* match your site background */
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .logo {
+      height: 50px; /* adjust as needed */
+    }
+
+    header .brand-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* ====== Hero Section ====== */
+    .hero {
+      position: relative;
+      background: url('img/globalaccelator.jpeg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(179, 214, 235, 0.3); /* translucent cool light blue overlay */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    /* ====== Mission Section ====== */
+    .mission {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #F3F0E7; /* eggshell pale off-white */
+    }
+
+    .mission h2 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .mission p {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ====== Call to Action Section ====== */
+    .cta {
+      background-color: #B3D6EB; /* cool light blue */
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .cta h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .cta a.button {
+      font-size: 1.2rem;
+    }
+
+    /* ====== Footer ====== */
+    footer {
+      background-color: #F3F0E7;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+    }
+
+    /* ====== Responsive Design ====== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header .brand-name {
+        font-size: 1.2rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .cta h3 {
+        font-size: 1.5rem;
+      }
+
+      /* Media queries adjust layout and text sizes for smaller screens */
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <!-- ====== Header with Logo and Brand Name ====== -->
+  <header>
+    <img src="img/cw_logo.png" alt="Charity: Water Logo" class="logo">
+    <span class="brand-name">Charity: Water</span>
+  </header>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+  <!-- ====== Hero Section ====== -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Change Flows From You</h1>
+      <p>Your action fuels sustainable, community-led water access for those most affected by climate change—backed by charity: water’s 100% model and transparency.</p>
+      <a href="#" class="button">Start Today</a>
+    </div>
+  </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <!-- ====== Mission Section ====== -->
+  <section class="mission">
+    <h2>Our Mission</h2>
+    <p>Charity: Water’s mission is to provide sustainable and accessible sources of water to communities affected by climate change.</p>
+  </section>
+
+  <!-- ====== Call to Action Section ====== -->
+  <section class="cta">
+    <h3>Your donation today builds water sustainability for tomorrow.</h3>
+    <a href="#" class="button">Donate Now</a>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer>
+    &copy; 2025 Charity: Water. All rights reserved.
+  </footer>
+
 </body>
 </html>
